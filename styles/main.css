@@ -5,12 +5,18 @@ html {
 .game_container {
 	background: white;
 	width: 780px;
-	height: 430px;
 	margin: 10px auto;
 	padding: 10px;
 }
 
+@font-face {
+	font-family: Canterbury;
+	src: url('../assets/fonts/Canterbury.ttf');
+}
+
 .game_header {
 	text-align: center;
-	font-family: Helvetica;
+	font-family: Canterbury, Helvetica;
+	font-size: 48pt;
+	margin: 0 0 20px 0;
 }
