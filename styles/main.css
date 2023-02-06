@@ -2,7 +2,7 @@ html {
 	background-color: lightslategray;
 }
 
-.game_container {
+.game-container {
 	background: white;
 	width: 780px;
 	margin: 10px auto;
@@ -14,9 +14,19 @@ html {
 	src: url('../assets/fonts/Canterbury.ttf');
 }
 
-.game_header {
+.game-header {
 	text-align: center;
 	font-family: Canterbury, Helvetica;
 	font-size: 48pt;
 	margin: 0 0 20px 0;
+}
+
+.data-block p {
+	margin: 8px 0;
+}
+
+kbd {
+  border-radius: 2px;
+  padding: 2px;
+  border: 1px solid black;
 }

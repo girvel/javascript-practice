@@ -8,12 +8,22 @@
 	<link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-	<div class="game_container">
-		<h2 class="game_header">The kingdom</h2>
+	<div class="game-container" id="game-container">
+		<h2 class="game-header">The kingdom</h2>
 		<p id="date"></p>
-		<p>Land: <span id="resource_land"></span></p>
-		<p>People: <span id="resource_people"></span></p>
-		<p>Food: <span id="resource_food"></span></p>
+
+		<div id="resources" class="data-block">
+			<p>Land: <span data-resource="land"></span></p>
+			<p>People: <span data-resource="people"></span></p>
+			<p>Food: <span data-resource="food"></span></p>
+		</div>
+
+		<div id="bindings" class="data-block">
+			<h4>Actions</h4>
+			<ul>
+				<li><kbd data-action="sell">S</kbd>ell 100 food</li>
+			</ul>
+		</div>
 	</div>
 
 	<script src="scripts/main.js"></script>

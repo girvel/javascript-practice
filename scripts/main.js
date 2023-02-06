@@ -1,3 +1,7 @@
+function queryData(root, data_kind, value) {
+	return root.querySelector(`[data-${data_kind}="${value}"]`);
+}
+
 const globals = {
 	birth_rate: 1 / (2 * 4 * 9),
 	land_capacity: 10,
@@ -9,7 +13,7 @@ class Kingdom {
 		this.resources = {
 			land: 1,
 			people: 2,
-			food: 1
+			food: 5,
 		};
 
 		this.day = 1;
@@ -17,6 +21,20 @@ class Kingdom {
 }
 
 let kingdom = new Kingdom();
+
+// actions
+let bindings = document.getElementById("bindings");
+
+document.addEventListener('keydown', event => {
+	if (event.code === 
+		"Key" + queryData(bindings, "action", "sell").textContent
+	) {
+		if (kingdom.resources.food >= 100) {
+			kingdom.resources.food -= 100;
+			kingdom.resources.land++;
+		}
+	}
+});
 
 // game cycle
 setInterval(() => {
@@ -43,8 +61,9 @@ setInterval(() => {
 	kingdom.resources.people = food_d;
 
 	// display system
+	const resources_block = document.getElementById("resources");
 	new Map(Object.entries(kingdom.resources)).forEach((value, resource) => {
-		document.getElementById(`resource_${resource}`).textContent 
+		queryData(resources, "resource", resource).textContent 
 			= Math.trunc(value);
 	});
 
