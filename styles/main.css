@@ -1,0 +1,16 @@
+html {
+	background-color: lightslategray;
+}
+
+.game_container {
+	background: white;
+	width: 780px;
+	height: 430px;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+.game_header {
+	text-align: center;
+	font-family: Helvetica;
+}
